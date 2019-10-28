@@ -12,6 +12,6 @@ variable2 = 'Hello python community!'
 
 print(variable2)
 
-variable2 = 'Let's explore the world of coding together!'
+variable2 = "Let's explore the world of coding together!"
 
 print(variable2)
