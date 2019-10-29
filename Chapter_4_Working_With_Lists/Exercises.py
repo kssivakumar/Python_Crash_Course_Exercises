@@ -51,7 +51,8 @@ for animal in animals:
     else:
         print(message3)
         
-# - Add a line at the end of your program stating what these animals have in common. You could print a sentence such as 'Any of these animals would make a great pet!'
+# - Add a line at the end of your program stating what these animals have in common. You could print a sentence such 
+# as 'Any of these animals would make a great pet!'
 
 animals = ['Shark', 'Dolphins', 'Fish']
 
