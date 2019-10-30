@@ -174,7 +174,8 @@ else:
     print('You just earned 15 points!')
 
 
-# 5.6 Stages Of Life: Write an if-elif-else chain that determines a person's stage of life. Set a value for the lariable age, and then:
+# 5.6 Stages Of Life: Write an if-elif-else chain that determines a person's stage of life. Set a value for the lariable age, 
+#and then:
 # - If the person is less than 2 years old, print a message that the person is a baby.
 # - If the person is at least 2 years old but less than 4, print a message that the person is a toddler.
 # - If the person is at least 4 years old but less than 13 print a message that the person is a kid.
@@ -183,7 +184,8 @@ else:
 # - If the person is age 65 or older, print a message that the person is an elder.
 
 # I used the random module here so that when we do not have to hard code the age of the person we are looking. Instead
-# we can just run the program and get a random age between 0 and 100 and the program will automatically tell us what stage of life they are in.
+# we can just run the program and get a random age between 0 and 100 and the program will automatically tell us what stage
+# of life they are in.
 
 import random
 age = range(101)
@@ -201,7 +203,8 @@ else:
     print('This person is an elder.')
 
 
-# 5.7 Favorite Fruit: Make a list of your favorite fruits, and then write a series of independent if statements that check for certain 
+# 5.7 Favorite Fruit: Make a list of your favorite fruits, and then write a series of independent if statements that check
+# for certain 
 # fruits in your list.
 # - Make a list of your favorite fruits and call it favorite_fruits.
 # - Write five if statements. Each should check whether a certain kind of fruit is in your list.
@@ -216,7 +219,8 @@ for fruit in favorite_fruits:
         
         
 # 5.8 Hello Admin: Make a list of five or more usernames, including tha name 'admin'. Imagine that you are writing code
-# that will print a greeting to each user after they log into a website. Loop through the list, and print a greeting to each user.
+# that will print a greeting to each user after they log into a website. Loop through the list, and print a greeting to 
+# each user.
 # - If the username is 'admin', print a special greeting, such as 'Hello admin, would you like to see a status report?'
 # - Otherwise, print a generic greeting, such as 'Hello Eric, thank you for logging in again.'
 
