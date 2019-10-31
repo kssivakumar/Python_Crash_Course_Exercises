@@ -2,12 +2,19 @@
 # and the city in which they live. You should have keys such as first_name, last_name, age, and city. Print each piece of
 # information stored in your dictionary.
 
+names = {'first_name' : 'Dylan', 'last_name' : 'Zenmaster', 'age' : 23, 'city' : 'San Francisco'}
+
+print({v for k,v in names.items()})
 
 
 # 6.2 Favorite Number: Use a dictionary to store people's favorite numbers. Think of five names, and use them as keys in your
 # dictionary. Think of a favorite number for each person, and store each as a value in your dictionary. Print each person's
 # name and their favorite number. For even more fun, poll a few friends and get some actual data for your program.
 
+numbers = {'dylan' : 23, 'austyn' : 13, 'jake' : 35, 'brice' : 62, 'devon' : 48}
+
+for k,v in numbers.items():
+    print(k,v)
 
 # 6.3 Glossary: A python dicitonary can be used to model an actual dictionary. However, to avoid confusion, let's call it
 # a glossary.
@@ -26,7 +33,7 @@
 
 # 6.5 Rivers: Make a dictionary containing three major rivers and the country each river runs through. One key-value pair
 # might be 'nile' : 'egypt'
-# - Use a loop to print a sentence about each river, such as 'The NIle runs through Egypt'
+# - Use a loop to print a sentence about each river, such as 'The Nile runs through Egypt'
 # - Use a loop to print the name of each river included in the dictionary.
 # - Use a loop to print the name of each country in the dictionary.
 
@@ -55,3 +62,12 @@
 
 # 6.10 Favorite Numbers: Modify your program from exercise 6.2 so each person can have more than one favorite number. Then
 # print each person's name along with their favorite numbers.
+
+# 6.11 Cities: Make a dictionary called cities. Use the namesof three cities as keys in your dictionary. Create a dictionary 
+# of information about each city and include the countrythat the city is in, its approximate population, and one fact 
+# about that city. The keys for eack city's dictioanry should be something like country, population, and fact. Print the name 
+# of each city and all information you have stored about it.
+
+# 6.12 Extensions: We're now working with multiple examples that are complex enough that they can be extended in any number
+# of ways. Use one of the example programs from this chapter, and extend it by adding new keys and values, changing the
+# the context of the porgram or improving the formatting of the output.
