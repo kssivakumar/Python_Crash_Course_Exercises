@@ -76,25 +76,73 @@ for k,v in favorite_languages.items():
 # and store all three dictionaries in a list called people. Loop through your list of people. As you loop through the list,
 # print everything you know about each person.
 
+person1 = {'first_name' : 'Dylan', 'last_name' : 'Zenmaster', 'age' : 23, 'city' : 'San Francisco'}
+
+
+person2 = {'first_name' : 'Jake', 'last_name' : 'Zen', 'age' : 24, 'city' : 'LA'}
+
+
+person3 = {'first_name' : 'Brice', 'last_name' : 'Man', 'age' : 24, 'city' : 'San Francisco'}
+
+
+people = [person1, person2, person3]
+
+for item in people:
+    if item == person1:
+        print(person1['first_name'] + ' ' + person1['last_name'] + ' is ' + str(person1['age']) + 
+              ' years old and lives in ' + person1['city'])
+    elif item == person2:
+        print(person2['first_name'] + ' ' + person2['last_name'] + ' is ' + str(person2['age']) + 
+              ' years old and lives in ' + person2['city'])
+    else:
+        print(person3['first_name'] + ' ' + person3['last_name'] + ' is ' + str(person3['age']) + 
+              ' years old and lives in ' + person3['city'])
+
 
 # 6.8 Pets: Make several dicitonaries, where the name of each dictionary is the name of a pet. In each dictionary, include
 # the kind of animal and the owner's name . Store these dictionaries in a list called pets. Next, loop through your list and 
-# as you doprint everything you know about each pet.
+# as you do print everything you know about each pet.
+
+cinder = {'owner_name' : 'Dylan', 'animal' : 'cat'}
+
+sparrow = {'owner_name' : 'Jake', 'animal' : 'cat'}
+
+ghost = {'owner_name' : 'Brice', 'animal' : 'dog'}
+
+pets = [cinder, sparrow, ghost]
+
+for pet in pets:
+    print(pet['owner_name'] + ' owns a ' + pet['animal'])
+    
+# This is a simpler way of doing exercise 6.7 as well. Just thoght I would add both ways in here.    
 
 
 # 6.9 Favorite Places: Make a dictionary called favorite_places. Think of three names to use as keys in the dicitonary, and
 # store one to three favorite places for each person. To make this exercise a bit more interesting, ask some friends to name
 # a few of their favorite places. Loop through the dictionary, and print each person's name and their favorite places.
 
+favorite_places = {'Jake': 'Italy', 'Brice': 'Australia', 'Dylan': 'San Francisco'}
+
+for k,v in favorite_places.items():
+    print(k + "'s favorite place in the world is " + v)
 
 # 6.10 Favorite Numbers: Modify your program from exercise 6.2 so each person can have more than one favorite number. Then
 # print each person's name along with their favorite numbers.
 
-# 6.11 Cities: Make a dictionary called cities. Use the namesof three cities as keys in your dictionary. Create a dictionary 
-# of information about each city and include the countrythat the city is in, its approximate population, and one fact 
+numbers = {'dylan' : '23 and 22', 'austyn' : '13 and 45', 'jake' : '35 and 21', 'brice' : '62 and 49', 'devon' : '48 and 98'}
+
+for k,v in numbers.items():
+    print(k + "'s favorite numbers are " + v)
+
+# 6.11 Cities: Make a dictionary called cities. Use the names of three cities as keys in your dictionary. Create a dictionary 
+# of information about each city and include the country that the city is in, its approximate population, and one fact 
 # about that city. The keys for eack city's dictioanry should be something like country, population, and fact. Print the name 
 # of each city and all information you have stored about it.
 
-# 6.12 Extensions: We're now working with multiple examples that are complex enough that they can be extended in any number
-# of ways. Use one of the example programs from this chapter, and extend it by adding new keys and values, changing the
-# the context of the porgram or improving the formatting of the output.
+cities = {'San Francisco': {'Country': 'USA', 'Population': 884363, 'Fact': 'Known as the number 1 tech hub in the world'}, 
+          'Stockholm': {'Country': 'Sweden', 'Population': 965232, 'Fact': 'Known as the number 2 tech hub in the world'}, 
+          'Oakland': {'Country': 'USA', 'Population': 429082, 'Fact': 'Home to the Oakland Raiders and Oakland Athletics'}}
+
+for k, v in cities.items():
+    print(k + ', is located in ' + v['Country'] + ' and has a population of ' + str(v['Population']) + 
+          '. Also, it is ' + v['Fact'])
