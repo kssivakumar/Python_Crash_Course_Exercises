@@ -181,7 +181,7 @@ magician_names = ['Dark Magician','Dark Magician Girl','Silent Magician']
 def make_great(names):
   names[:] = ['The Great ' + name for name in names]
 
-print(make_great(names=magician_names))
+make_great(names=magician_names)
 print(show_magicians(magician_names))
 
 # 8.11 Unchanged Magicians: Start with your work from exercise 8.10. Call the function make_great() with a copy of the 
@@ -189,19 +189,81 @@ print(show_magicians(magician_names))
 # Call show_magicians() with each list to show that you have one list of the orgional names and one list with 'The Great' 
 # added to each magician's name.
 
+def show_magicians(lst):
+  for item in lst:
+    print(item)
 
+magician_names = ['Dark Magician','Dark Magician Girl','Silent Magician']
+newlst = magician_names.copy()
+
+def make_great(names):
+  names[:] = ['The Great ' + name for name in names]
+
+make_great(names=newlst)
+
+print(show_magicians(magician_names))
+print(show_magicians(newlst))
 
 
 # 8.12 Sandwiches: Write a function that accepts a list of items a person wants on a sandwich. The function should have 
 # one parameter that collects as many items as the function call provides, and it should print a summary of the sandwich 
 # that is being ordered. Call the function three times, using a different number of arguments each time.
 
+# Call 1
+user_input = input('Please enter what you would like on your sandwich separated by a comma: ')
+sandwich_items = user_input.split(', ')
+
+def make_sandwich(lst):
+
+  print('The sandwich being ordered contains:')
+
+  for item in lst:
+    print(item)
+print(make_sandwich(sandwich_items))
+
+# Call 2
+user_input = input('Please enter what you would like on your sandwich separated by a comma: ')
+sandwich_items = user_input.split(', ')
+
+def make_sandwich(lst):
+
+  print('The sandwich being ordered contains:')
+
+  for item in lst:
+    print(item)
+print(make_sandwich(sandwich_items))
+
+# Call 3
+user_input = input('Please enter what you would like on your sandwich separated by a comma: ')
+sandwich_items = user_input.split(', ')
+
+def make_sandwich(lst):
+
+  print('The sandwich being ordered contains:')
+
+  for item in lst:
+    print(item)
+print(make_sandwich(sandwich_items))
 
 
 # 8.13 User Profile: Start with a copy of user_profile.py from page 153. Build a profile of yourself by calling 
 # build_profile(), using your first and last names and three other key value pairs that describe you.
 
+def build_profile(first, last, **user_info):
+  """Build a dictionary containing everything we
+  know about a user."""
 
+  profile = {}
+  profile['first_name'] = first
+  profile['Last_name'] = last
+
+  for key, value in user_info.items():
+    profile[key] = value
+  return profile
+
+user_profile = build_profile('Dylan', 'Zenner', location='San Francisco', field='Data Science', age=23)
+
+print(user_profile)
 
 
 
@@ -213,61 +275,16 @@ print(show_magicians(magician_names))
 # car = make_car('subaru', 'outback', color='blue', tow_package=True)
 # Print the dictionary that's returned to make sure all the information was stored correctly.
 
+def cars(manufacturer, model_name, **info):
 
+  profile = {}
+  profile['Manufacturer'] = manufacturer
+  profile['Model_Name'] = model_name
 
+  for key, value in info.items():
+    profile[key] = value
+  return profile
 
-# 8.15 Printing Models: Put the funcitons for the example printing_models.py in a seperate file called printing_functions.py. 
-# Write an import statement at the top of printing_models.py, and modify the file to use the imported functions.
+info = cars('subaru', 'outback', color='blue', tow_package=True)
 
-
-
-# 8.16 Imports: Using a program you wrote that has one funciton in it, store that function in a seperate file. 
-# Import the function into your main program file, and call the function using each of these approaches:
-# import module_name
-# from module_name import function_name
-# from module_name import function_name as fn
-# import module_name as mn
-# from module_name import *
-
-
-
-
-# 8.17 Styling Functions: Choose any three programs your wrote for this chapter, and make sure they follow the 
-# styling guidelines described in this section.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(info)
